@@ -1,0 +1,6 @@
+framework module ZLYInvisibleWatermark {
+  umbrella header "ZLYInvisibleWatermark-umbrella.h"
+
+  export *
+  module * { export * }
+}

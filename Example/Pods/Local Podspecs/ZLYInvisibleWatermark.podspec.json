@@ -1,0 +1,22 @@
+{
+  "name": "ZLYInvisibleWatermark",
+  "version": "0.1.0",
+  "summary": "A short description of ZLYInvisibleWatermark.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/summertian4/ZLYInvisibleWatermark",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "summertian4": "coderfish@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/summertian4/ZLYInvisibleWatermark.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZLYInvisibleWatermark/Classes/**/*"
+}

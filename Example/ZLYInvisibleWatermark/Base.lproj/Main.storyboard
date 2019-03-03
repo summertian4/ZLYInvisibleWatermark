@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="ZLYViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invisibleWatermark" translatesAutoresizingMaskIntoConstraints="NO" id="gTr-z0-bUJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="512"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-Mh-dNO">
+                                <rect key="frame" x="0.0" y="577" width="375" height="45"/>
+                                <color key="backgroundColor" red="0.3389053868856014" green="0.63803554944143737" blue="0.8257262110710144" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="选择图片">
+                                    <color key="titleColor" red="0.96208756350000002" green="0.96208756350000002" blue="0.96208756350000002" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASV-QL-ejO">
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="r4o-NG-KTp"/>
+                                </constraints>
+                                <state key="normal" title="导出图片">
+                                    <color key="titleColor" red="0.96208756350000002" green="0.96208756350000002" blue="0.96208756350000002" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6X-ab-P02">
+                                <rect key="frame" x="0.0" y="532" width="187.5" height="45"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.80784313730000001" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="添加水印">
+                                    <color key="titleColor" red="0.96208756350000002" green="0.96208756350000002" blue="0.96208756350000002" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addWatermarkButtonClicked:" destination="whP-gf-Uak" eventType="touchUpInside" id="NVL-s1-cOU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK7-lp-Cai">
+                                <rect key="frame" x="187.5" y="532" width="187.5" height="45"/>
+                                <color key="backgroundColor" red="0.9248691307106599" green="0.74238681490774594" blue="0.009835772494026571" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="显示水印">
+                                    <color key="titleColor" red="0.96208756350000002" green="0.96208756350000002" blue="0.96208756350000002" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWaterMarkButtonClicked:" destination="whP-gf-Uak" eventType="touchUpInside" id="hkO-k5-pZy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IK7-lp-Cai" firstAttribute="width" secondItem="Z6X-ab-P02" secondAttribute="width" id="5TD-o7-Uko"/>
+                            <constraint firstItem="IK7-lp-Cai" firstAttribute="top" secondItem="gTr-z0-bUJ" secondAttribute="bottom" id="5XN-s4-hXu"/>
+                            <constraint firstItem="IK7-lp-Cai" firstAttribute="height" secondItem="tx0-Mh-dNO" secondAttribute="height" id="8kH-k5-hsS"/>
+                            <constraint firstItem="Z6X-ab-P02" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="9TC-26-cg3"/>
+                            <constraint firstItem="ASV-QL-ejO" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="EI1-hf-HT3"/>
+                            <constraint firstItem="Z6X-ab-P02" firstAttribute="height" secondItem="tx0-Mh-dNO" secondAttribute="height" id="Ik1-Dh-Fek"/>
+                            <constraint firstItem="gTr-z0-bUJ" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="JLU-gi-JUo"/>
+                            <constraint firstAttribute="trailing" secondItem="IK7-lp-Cai" secondAttribute="trailing" id="SIH-nC-YK4"/>
+                            <constraint firstItem="IK7-lp-Cai" firstAttribute="leading" secondItem="Z6X-ab-P02" secondAttribute="trailing" id="Tjw-0m-nC0"/>
+                            <constraint firstItem="gTr-z0-bUJ" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="UJE-6p-8Bc"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="ASV-QL-ejO" secondAttribute="bottom" id="Ur9-rS-Ldp"/>
+                            <constraint firstAttribute="trailing" secondItem="gTr-z0-bUJ" secondAttribute="trailing" id="a57-lv-Wsb"/>
+                            <constraint firstAttribute="trailing" secondItem="ASV-QL-ejO" secondAttribute="trailing" id="a8j-Vd-OLV"/>
+                            <constraint firstItem="ASV-QL-ejO" firstAttribute="top" secondItem="tx0-Mh-dNO" secondAttribute="bottom" id="bGb-Kl-duA"/>
+                            <constraint firstItem="tx0-Mh-dNO" firstAttribute="top" secondItem="IK7-lp-Cai" secondAttribute="bottom" id="bkK-sa-SQS"/>
+                            <constraint firstItem="tx0-Mh-dNO" firstAttribute="top" secondItem="Z6X-ab-P02" secondAttribute="bottom" id="hBE-CL-II9"/>
+                            <constraint firstAttribute="trailing" secondItem="tx0-Mh-dNO" secondAttribute="trailing" id="qPl-hH-Cjj"/>
+                            <constraint firstItem="tx0-Mh-dNO" firstAttribute="height" secondItem="ASV-QL-ejO" secondAttribute="height" id="r7E-Tc-Cbd"/>
+                            <constraint firstItem="tx0-Mh-dNO" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="zRM-yG-YjL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="gTr-z0-bUJ" id="Tzk-7P-Dhg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="invisibleWatermark" width="750" height="1334"/>
+    </resources>
+</document>

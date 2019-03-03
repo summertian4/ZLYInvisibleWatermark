@@ -1,0 +1,16 @@
+PODS:
+  - ZLYInvisibleWatermark (0.1.0)
+
+DEPENDENCIES:
+  - ZLYInvisibleWatermark (from `../`)
+
+EXTERNAL SOURCES:
+  ZLYInvisibleWatermark:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZLYInvisibleWatermark: f82f6b3de06199e57f9117ee79b8a3bb0a347d01
+
+PODFILE CHECKSUM: ac39ccd2795d2074ded9433cf4759b06752b97fa
+
+COCOAPODS: 1.5.3
