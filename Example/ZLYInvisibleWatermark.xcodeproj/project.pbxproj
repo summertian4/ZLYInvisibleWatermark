@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = cocoa.lingyu;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = A59RPD6993;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -301,10 +304,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZLYInvisibleWatermark_Example/Pods-ZLYInvisibleWatermark_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ZLYInvisibleWatermark/ZLYInvisibleWatermark.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLYInvisibleWatermark.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,9 +490,11 @@
 			baseConfigurationReference = C985A55F6F3DB861365D210F /* Pods-ZLYInvisibleWatermark_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A59RPD6993;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZLYInvisibleWatermark/ZLYInvisibleWatermark-Prefix.pch";
 				INFOPLIST_FILE = "ZLYInvisibleWatermark/ZLYInvisibleWatermark-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,9 +507,11 @@
 			baseConfigurationReference = A4C70EAD1448E7CE1D29C704 /* Pods-ZLYInvisibleWatermark_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A59RPD6993;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZLYInvisibleWatermark/ZLYInvisibleWatermark-Prefix.pch";
 				INFOPLIST_FILE = "ZLYInvisibleWatermark/ZLYInvisibleWatermark-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

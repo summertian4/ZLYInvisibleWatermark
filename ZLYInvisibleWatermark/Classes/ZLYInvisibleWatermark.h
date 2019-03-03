@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)visibleWatermark:(UIImage *)image;
 + (UIImage *)addWatermark:(UIImage *)image
                      text:(NSString *)text;
++ (void)addWatermark:(UIImage *)image
+                text:(NSString *)text
+          completion:(void (^ __nullable)(UIImage *))completion;
 @end
 
 NS_ASSUME_NONNULL_END

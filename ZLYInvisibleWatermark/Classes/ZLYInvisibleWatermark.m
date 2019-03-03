@@ -103,7 +103,7 @@
                                  NSForegroundColorAttributeName: [UIColor colorWithRed:0
                                                                                  green:0
                                                                                   blue:0
-                                                                                 alpha:0.05]};
+                                                                                 alpha:0.01]};
     UIImage *newImage = [image copy];
     CGFloat x = 0.0;
     CGFloat y = 0.0;
@@ -127,6 +127,19 @@
         idx1 ++;
     }
     return newImage;
+}
+
++ (void)addWatermark:(UIImage *)image
+                     text:(NSString *)text
+               completion:(void (^ __nullable)(UIImage *))completion {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *result = [self addWatermark:image text:text];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion) {
+                completion(result);
+            }
+        });
+    });
 }
 
 + (UIImage *)addWatermark:(UIImage *)image

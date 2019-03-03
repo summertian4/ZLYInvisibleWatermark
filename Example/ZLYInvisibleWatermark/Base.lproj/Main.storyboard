@@ -27,9 +27,12 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-Mh-dNO">
                                 <rect key="frame" x="0.0" y="577" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.3389053868856014" green="0.63803554944143737" blue="0.8257262110710144" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="选择图片">
+                                <state key="normal" title="导入图片(需有白底)">
                                     <color key="titleColor" red="0.96208756350000002" green="0.96208756350000002" blue="0.96208756350000002" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectImageButtonClicked:" destination="whP-gf-Uak" eventType="touchUpInside" id="U9u-ML-Wga"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASV-QL-ejO">
                                 <rect key="frame" x="0.0" y="622" width="375" height="45"/>

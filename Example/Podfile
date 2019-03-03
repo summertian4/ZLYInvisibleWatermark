@@ -4,7 +4,7 @@ platform :ios, '8.0'
 
 target 'ZLYInvisibleWatermark_Example' do
   pod 'ZLYInvisibleWatermark', :path => '../'
-
+  pod 'MBProgressHUD'
   target 'ZLYInvisibleWatermark_Tests' do
     inherit! :search_paths
 
