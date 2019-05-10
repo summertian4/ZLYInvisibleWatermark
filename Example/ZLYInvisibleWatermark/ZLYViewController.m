@@ -21,7 +21,7 @@
     [super viewDidLoad];
 
     int result = [ZLYInvisibleWatermark mixedCalculation:255];
-    NSLog(@"%@", result);
+    NSLog(@"%d", result);
 }
 
 - (IBAction)showWaterMarkButtonClicked:(UIButton *)sender {
