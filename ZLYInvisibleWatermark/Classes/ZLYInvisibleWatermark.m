@@ -17,6 +17,9 @@
 @implementation ZLYInvisibleWatermark
 
 + (UIImage *)visibleWatermark:(UIImage *)image {
+    if (!image) {
+        return nil;
+    }
     // 1. Get the raw pixels of the image
     // 定义 32位整形指针 *inputPixels
     UInt32 * inputPixels;
@@ -25,7 +28,14 @@
     CGImageRef inputCGImage = [image CGImage];
     NSUInteger inputWidth = CGImageGetWidth(inputCGImage);
     NSUInteger inputHeight = CGImageGetHeight(inputCGImage);
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGColorSpaceRef colorSpace;
+    if (@available(iOS 9.0, *)) {
+        // This is what iOS device used colorspace, combined with right bitmapInfo, even without decode, can still avoid extra CA::Render::copy_image(which marked `Color Copied Images` from Instruments)
+        colorSpace = CGColorSpaceCreateWithName(kCGColorSpaceSRGB);
+    } else {
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+    }
 
     NSUInteger bytesPerPixel = 4;
     NSUInteger bitsPerComponent = 8;
@@ -40,6 +50,11 @@
     CGContextRef context = CGBitmapContextCreate(inputPixels, inputWidth, inputHeight,
                                                  bitsPerComponent, inputBytesPerRow, colorSpace,
                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGColorSpaceRelease(colorSpace);
+    if (!context) {
+        free(inputPixels);
+        return nil;
+    }
     //根据目前像素在界面绘制图像
     CGContextDrawImage(context, CGRectMake(0, 0, inputWidth, inputHeight), inputCGImage);
 
@@ -74,7 +89,6 @@
     UIImage * processedImage = [UIImage imageWithCGImage:newCGImage];
     //释放
     // 5. Cleanup!
-    CGColorSpaceRelease(colorSpace);
     CGContextRelease(context);
     free(inputPixels);
 
